@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>CreateAssetMenuProperty</Title>
+      <Author>RestInJoy
+      </Author>
+      <Description>Creates a createassetmenu property with respective editable fields for Scriptable object (must be used right before declaration of SO)
+      </Description>
+      <HelpUrl> mailto:restinjoy20@gmail.com
+      </HelpUrl>
+      <Shortcut>cram</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>menuName</ID>
+          <ToolTip>Name in rightclick-&gt; Create/ScriptableObjects/Samplename</ToolTip>
+          <Default>menuName</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>DefaultNameForNewSO</ID>
+          <ToolTip>The default filename for new scriptable objects of this type</ToolTip>
+          <Default>DefaultNameForNewSO</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Object Editable="true">
+          <ID>0</ID>
+          <ToolTip>The order of this item in the menu (first index is 0)</ToolTip>
+          <Default>0</Default>
+          <Function>
+          </Function>
+          <Type>
+          </Type>
+        </Object>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[[CreateAssetMenu(fileName = "$DefaultNameForNewSO$", menuName = "ScriptableObjects/$menuName$", order = $0$)]$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

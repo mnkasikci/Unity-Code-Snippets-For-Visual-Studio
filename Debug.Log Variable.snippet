@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>Debug.Log with Var</Title>
+      <Author>Restinjoy</Author>
+      <Description>Creates a Debug.Log with a variable</Description>
+      <HelpUrl>mailto:restinjoy20@gmail.com
+      </HelpUrl>
+      <Shortcut>dlv</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>UnityEngine
+          </Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>Variable</ID>
+          <ToolTip>Variable</ToolTip>
+          <Default>Variable</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Text</ID>
+          <ToolTip>Text</ToolTip>
+          <Default>Text</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[Debug.Log($$"$Text$ is {$Variable$}.");$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>UnitySingleton</Title>
+      <Author>RestInJoy</Author>
+      <Description>Creates a unity singleton within the class</Description>
+      <HelpUrl>mailto:restinjoy20@gmail.com</HelpUrl>
+      <Shortcut>singleton</Shortcut>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>UnityEngine</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal Editable="false">
+          <ID>className</ID>
+          <ToolTip>className</ToolTip>
+          <Default>className</Default>
+          <Function>ClassName()</Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>Instance</ID>
+          <ToolTip>Instance</ToolTip>
+          <Default>Instance</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp" Delimiter="$"><![CDATA[#region Singleton
+    public static $className$ $Instance$ { get; private set; }
+
+    void Awake()
+    {
+        transform.parent = null;
+        if ($Instance$ == null)
+        {
+            $Instance$ = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
+    }
+    #endregion
+$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
